@@ -1,0 +1,333 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+
+   
+}
+title {
+  display: none;
+}
+
+
+
+.anuncio { display: none;
+  font-family: "Honk", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 15,
+    "SHLN" 50;
+}
+
+.header {
+  padding: 15px;
+  background-color: rgb(100, 153, 184);
+  font-family: "Butterfly Kids", cursive;
+  font-weight: bolder;
+  font-style: normal;
+  font-size: 17px;
+  color: aliceblue;
+  display: grid;
+  grid-template-columns: 13% 78% 9% ;
+   grid-template-areas: "logo navbar compra"   
+} 
+.logo {
+ grid-area: logo;
+ width: 55px ; 
+ align-items: center ; 
+  
+  }
+.logo img {
+  width: 100%;  
+}
+
+
+.navbar{
+  grid-area: navbar;
+  text-align: end;
+  margin-top: 18px;
+}
+
+li a {
+ color: aliceblue;
+ }
+ .menu-navbar {
+  display: none;
+  list-style: none;
+  text-decoration: none;
+   }
+ 
+#chkToggle:checked + .menu-navbar {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 18px;}
+.navbar label{
+  cursor: pointer;
+ }
+.navbar-toggle {
+  font-size: 23px;
+}
+
+.menu-productos{
+  display: none;
+  list-style: none;
+  text-decoration: none;      
+}
+
+#chkToggleproductos:checked + .menu-productos {
+ display: block;
+ margin-top: 0.5em;
+}
+.menu-productos li {
+  cursor: pointer; 
+  line-height: 1.5em;
+  }
+#chkToggle{
+  display: none;
+}
+#chkToggleproductos {
+  display: none;
+}
+.compra {
+  grid-area: compra;
+  width:100% ;
+  display: flex;
+  justify-content: end;
+  margin-top: 18px; 
+  cursor: pointer;
+}
+.compra img {
+  width: 25px;
+}
+main { background-color :rgb(205, 233, 250);
+  height: 120vh;  
+} 
+ 
+
+#carousel{ 
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: rotation 22s infinite linear;
+  z-index: auto;
+  margin-top: 25px;
+}
+#carousel:hover{
+  animation-play-state: paused;
+}
+#carousel figure{
+  position: absolute;
+  width: 65%;
+  height: 87%;
+  left: 10px;  
+  background:rgb(150, 192, 216);
+  overflow: hidden;
+  border: solid 5px #fff;
+}
+#carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(260px);}
+#carousel figure:nth-child(2){ transform: rotateY(40deg) translateZ(260px);}
+#carousel figure:nth-child(3){ transform: rotateY(80deg) translateZ(260px);}
+#carousel figure:nth-child(4){ transform: rotateY(120deg) translateZ(260px);}
+
+#carousel img{
+  
+  cursor: pointer;
+  transition: all .5s ease;
+  width: 80%;
+}
+#carousel img:hover{
+  -webkit-filter: grayscale(0);
+  transform: scale(1.2,1.2);
+}
+
+@keyframes rotation{
+  from{
+      transform: rotateY(0deg);
+  }
+  to{
+      transform: rotateY(360deg);
+  }
+}
+.secciones {
+ position: relative;
+ top:300px;
+ font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+  padding: 15px;
+  color:  rgb(57, 123, 161);
+  text-align: center;
+  list-style: none;
+ 
+}
+.secciones h2 {
+  font-size: 30px;
+  margin-top: 20PX;
+}
+.bienvenida {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;  
+}
+ .bienvenida p {
+  font-size: 20px;
+  margin-bottom: 20PX;
+ }
+ .destacados h2 {
+  margin-bottom: 18px;
+ }
+ .galeria-destacados {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-areas: "foto1 foto2 foto3 foto4"
+ }
+ .foto1 {
+  grid-area:  foto1;
+  width:80%;
+  border: 5px solid;
+  border-radius: 10px;
+ }
+ .foto2 {
+  grid-area:  foto2;
+  width: 80%;
+  border: 5px solid;
+  border-radius: 10px;
+ }.foto3 {
+  grid-area:  foto3;
+  width: 80%;
+  border: 5px solid;
+  border-radius: 10px;
+ }.foto4 {
+  grid-area:  foto4;
+  width: 80%;
+  border: 5px solid;
+  border-radius: 10px;
+ }
+.galeria-destacados p {
+  font-size: 25px;
+}
+@media screen and (min-width:1090px) {
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+      }
+  .anuncio {
+    display: block;
+   padding: 5px;
+    background-color: yellow;
+    
+  }
+  .anuncio p{
+    text-align: center;
+    font-size: 28px;} 
+   
+  .header{
+    border-radius: 5px;
+    padding:10px;
+    font-size: 27px;
+    color: aliceblue;
+    align-items: center;
+  }
+  .logo{
+    display: flex;
+    
+    } 
+    .logo p{
+      margin-left: 15px;
+      font-size: 26px;
+    
+    }
+  .navbar-toggle{
+    display: none;
+  }
+  .menu-navbar{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+  #chkToggleproductos:checked + .menu-productos {
+    display:flex;
+    justify-content: space-between;
+    height: 35px;
+    width: 500px;    
+    margin-top: 15px;
+    font-size: 24PX;
+ }
+  .menu-productos li {
+    border: 1px solid aliceblue;
+    border-radius: 5px;
+    width: 87px;
+    
+  }
+   .compra img {
+    width: 30px;
+   
+  }
+}
+@media screen and (max-width:650px){
+  
+  #chkToggle:checked + .menu-navbar {
+    display:flex;
+    flex-direction: column;
+    align-items:start;
+    margin-left: 17px;
+   }
+  li {line-height: 2em;
+  }
+  #chkToggleproductos:checked + .menu-productos {
+    display: block;
+    float: inline-end;
+    margin-top: 2em;     
+   }
+   .secciones h2 {
+    font-size: 25px;
+    
+  }
+  .bienvenida {
+    padding: 10px;
+    gap: 11px;      
+  }
+  .bienvenida p {
+    text-align: justify ;
+    font-size: 16px;
+  }
+  .galeria-destacados p {
+    font-size: 12px;
+    width: 80%;
+  }
+  .galeria-destacados h3 {
+    font-size: 14px;
+    width: 85%;
+   
+  }
+  .foto1 {
+    grid-area:  foto1;
+    width:70%;
+    border: 3px solid;
+    border-radius: 10px;
+   }
+   .foto2 {
+    grid-area:  foto2;
+    width: 70%;
+    border: 3px solid;
+    border-radius: 10px;
+   }.foto3 {
+    grid-area:  foto3;
+    width: 70%;
+    border: 3px solid;
+    border-radius: 10px;
+   }.foto4 {
+    grid-area:  foto4;
+    width: 70%;
+    border: 3px solid;
+    border-radius: 10px;
+   }
+}

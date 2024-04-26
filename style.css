@@ -8,7 +8,6 @@
 title {
   display: none;
 }
-
 .anuncio { display: none;
   font-family: "Honk", system-ui;
   font-optical-sizing: auto;
@@ -30,27 +29,21 @@ title {
   grid-template-columns: 5% 66% 22% 7% ;
    grid-template-areas: "logo navbar buscador compra"  ;
   
- 
-   
 } 
 .logo {
  grid-area: logo;
  width: 55px ;
  align-items: center ;
- margin-left: 5px;
-  
+ margin-left: 5px;  
   }
 .logo img {
   width: 100%;  
 }
-
-
 .navbar{
   grid-area: navbar;
   text-align: end;
   margin:15px;
 }
-
 li a {
  color: aliceblue;
  }
@@ -58,8 +51,7 @@ li a {
   display: none;
   list-style: none;
   text-decoration: none;
-   }
- 
+   } 
 #chkToggle:checked + .menu-navbar {
   display: flex;
   justify-content: space-between;
@@ -72,13 +64,11 @@ padding: 10px;}
 .navbar-toggle {
   font-size: 23px;
 }
-
 .menu-productos{
   display: none;
   list-style: none;
   text-decoration: none;      
 }
-
 #chkToggleproductos:checked + .menu-productos {
  display: block;
  margin-top: 0.5em;
@@ -119,9 +109,7 @@ padding: 10px;}
  font-size: 15px; 
 }
 .search-box button img {
-  width: 25px;
-
-  
+  width: 25px;  
 }
 .search-box button {
  
@@ -147,9 +135,7 @@ main { background-color :rgb(205, 233, 250);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} 
- 
-
+}  
 #carousel{ 
   width: 100%;
   height: 250px;
@@ -176,8 +162,7 @@ main { background-color :rgb(205, 233, 250);
 #carousel figure:nth-child(3){ transform: rotateY(80deg) translateZ(260px);}
 #carousel figure:nth-child(4){ transform: rotateY(120deg) translateZ(260px);}
 
-#carousel img{
-  
+#carousel img{  
   cursor: pointer;
   transition: all .5s ease;
   width: 80%;
@@ -199,17 +184,14 @@ main { background-color :rgb(205, 233, 250);
   height: 250px;
   width: 100%;
 }
-
-.secciones {
- 
+.secciones { 
  font-family: "Indie Flower", cursive;
   font-weight: 400;
   font-style: normal;
   padding: 0px;
   color:  rgb(57, 123, 161);
   text-align: center;
-  list-style: none;
- 
+  list-style: none; 
 }
 .secciones h2 {
   font-size: 30px;
@@ -263,7 +245,6 @@ main { background-color :rgb(205, 233, 250);
   height: 25px;
   cursor: pointer;
 }
-
 .galeria-todos {  
   padding: 18px;
   display: flex;
@@ -285,7 +266,7 @@ main { background-color :rgb(205, 233, 250);
   }
    .galeria-todos div img:hover{
       transform: scale(1.2);
-      transition: 1s;  }
+      transition: 1s; }
  
   .galeria-todos span{
     cursor: pointer;
@@ -302,16 +283,13 @@ main { background-color :rgb(205, 233, 250);
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-template-areas: "ubicacion contacto"
-    
+    grid-template-areas: "ubicacion contacto"   
   }
   .ubicacion{
     grid-area: ubicacion;    
   }
-  .ubicacion h4 a img{ 
-    
-    cursor: pointer; 
-  
+  .ubicacion h4 a img{     
+    cursor: pointer;  
 }
   .contacto {
     grid-area: contacto;
@@ -347,8 +325,7 @@ main { background-color :rgb(205, 233, 250);
     font-size: 16px; 
     }
     label {
-      font-size: 18px;
-      
+      font-size: 18px;      
     }
     .campo-textarea {
       width: 90%;
@@ -375,7 +352,6 @@ main { background-color :rgb(205, 233, 250);
       display: flex;
       justify-content: space-between;
      }
-
 @media screen and (min-width:1090px) {
     *{
     margin: 0;
@@ -390,8 +366,8 @@ main { background-color :rgb(205, 233, 250);
   }
   .anuncio p{
     text-align: center;
-    font-size: 28px;} 
-   
+    font-size: 28px;
+  }   
   .header{
     border-radius: 3px;
     padding:13px ;
@@ -454,14 +430,10 @@ main { background-color :rgb(205, 233, 250);
   .logo {
     grid-area: logo;
     width: 44px ;
-    margin-top: 15px;}
-      
-      
+    margin-top: 15px;}            
   .logo p {
     display: none;
-  }
-      
-    
+  }          
   #chkToggle:checked + .menu-navbar {
       display:flex;
       flex-direction: column;
@@ -508,8 +480,7 @@ main { background-color :rgb(205, 233, 250);
     }
     .galeria-destacados{
       margin-bottom: 0px;
-    }
-   
+    }   
      .galeria-destacados h3 {
       font-size: 12px;
       width: 85%;     
@@ -540,27 +511,5 @@ main { background-color :rgb(205, 233, 250);
       border-radius: 10px;
     }
     .galeria-todos{
-      margin: 0;
-     
+      margin: 0;     
     }
-    .galeria-todos div {
-      width: 100px;
-      height: 140px;
-      margin: 10px;
-      
-  }
-      .todos-productos h3 {
-        font-size: 15px;
-      }
-      .contenedor {
-        display: block;
-      }
-      .ubicacion, .contacto{
-       padding: 25px 15px 25px 15px;
-      }
-      .ubicacion h3, h4 {
-        font-size: 15px;
-      }
-
-  
-     }

@@ -391,6 +391,8 @@ main { background-color :rgb(205, 233, 250);
     text-align: center;
     margin-top: 6px;
   }
+  .navbar-productos {
+    font-size: 27px}
   #chkToggleproductos:checked + .menu-productos {
     display: flex;
     justify-content: space-around;

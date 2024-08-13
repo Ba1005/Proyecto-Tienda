@@ -25,7 +25,7 @@ title {
   font-size: 17px;
   color: aliceblue;
   display: grid;
-  grid-template-columns: 5% 66% 22% 7%;
+  grid-template-columns: 6% 65% 22% 7%;
   grid-template-areas: 'logo navbar buscador compra';
 }
 .logo {
@@ -34,7 +34,7 @@ title {
   align-items: center;
   margin-left: 5px;
 }
-.logo h1 {
+.logo p {
   font-size: 17px;
 }
 .logo img {
@@ -142,11 +142,11 @@ main {
 }
 #carousel {
   width: 100%;
-  height: 250px;
+  height: 280px;
+  margin: auto;
   position: absolute;
   transform-style: preserve-3d;
-  animation: rotation 22s infinite linear;
-  z-index: auto;
+  animation: rotation 30s infinite linear;
   margin-top: 25px;
 }
 #carousel:hover {
@@ -154,30 +154,38 @@ main {
 }
 #carousel figure {
   position: absolute;
-  width: 65%;
-  height: 87%;
+  width: 60%;
+  height: 85%;
   left: 10px;
   background: rgb(150, 192, 216);
   overflow: hidden;
   border: solid 5px #fff;
+  border-radius: 5px;
 }
 #carousel figure:nth-child(1) {
-  transform: rotateY(0deg) translateZ(260px);
+  transform: rotateY(0deg) translateZ(200px);
 }
 #carousel figure:nth-child(2) {
-  transform: rotateY(40deg) translateZ(260px);
+  transform: rotateY(60deg) translateZ(200px);
 }
 #carousel figure:nth-child(3) {
-  transform: rotateY(80deg) translateZ(260px);
+  transform: rotateY(90deg) translateZ(200px);
 }
 #carousel figure:nth-child(4) {
-  transform: rotateY(120deg) translateZ(260px);
+  transform: rotateY(130deg) translateZ(200px);
 }
 
 #carousel img {
   cursor: pointer;
   transition: all 0.5s ease;
-  width: 80%;
+  width: 70%;
+  object-fit: cover;
+}
+#carousel figure:nth-child(2) img {
+  height: 100%;
+}
+#carousel figure:nth-child(3) img {
+  height: 100%;
 }
 #carousel img:hover {
   -webkit-filter: grayscale(0);
@@ -193,8 +201,24 @@ main {
   }
 }
 .content {
-  height: 250px;
+  height: 280px;
   width: 100%;
+}
+.boton-volver {
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  bottom: 111px;
+  right: 5px;
+  z-index: auto;
+}
+.boton-volver button {
+  background: transparent;
+  border: none;
+}
+.boton-volver button img {
+  width: 100%;
+  cursor: pointer;
 }
 .secciones {
   font-family: 'Indie Flower', cursive;
@@ -205,9 +229,13 @@ main {
   text-align: center;
   list-style: none;
 }
+
 .secciones h2 {
   font-size: 30px;
   margin-top: 20px;
+}
+h1 {
+  font-size: 30px;
 }
 .bienvenida {
   padding: 25px;
@@ -221,38 +249,38 @@ main {
   margin-bottom: 20px;
 }
 .destacados h2 {
-  margin-bottom: 18px;
+  margin-bottom: 2rem;
 }
 .galeria-destacados {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: 'foto1 foto2 foto3 foto4';
-  margin: 10px 30px 25px 30px;
-  padding: 5px 15px 20px 15px;
+  justify-items: center;
+  gap: 1em;
 }
+.galeria-destacados > div {
+  border: 1px solid rgb(57, 123, 161);
+  border-radius: 15px;
+  width: 100%;
+  max-width: 300px;
+  max-height: 400px;
+  box-shadow: 0px 6px 23px -15px rgba(0, 0, 0, 0.75);
+  padding-top: 10px;
+}
+.galeria-destacados > div > img {
+  width: 75%;
+  object-fit: contain;
+  border-radius: 100%;
+  margin-bottom: 1em;
+  transition: 1s;
+}
+.galeria-destacados div img:hover {
+  transform: scale(1.1);
+}
+
 .galeria-destacados div img {
   cursor: pointer;
 }
-.foto1 {
-  grid-area: foto1;
-}
-.foto2 {
-  grid-area: foto2;
-}
-.foto3 {
-  grid-area: foto3;
-}
-.foto4 {
-  grid-area: foto4;
-}
-.foto1,
-.foto2,
-.foto3,
-.foto4 {
-  width: 80%;
-  border: 4px solid;
-  border-radius: 10px;
-}
+
 .galeria-destacados p {
   font-size: 25px;
 }
@@ -260,6 +288,9 @@ main {
   width: 25px;
   height: 25px;
   cursor: pointer;
+}
+.todos-productos {
+  margin-top: 3em;
 }
 .galeria-todos {
   padding: 18px;
@@ -275,13 +306,14 @@ main {
 }
 .galeria-todos div img {
   width: 100%;
+  padding: 15px;
   border: 5px solid;
   border-radius: 100px;
   cursor: pointer;
   transition: 1s;
 }
 .galeria-todos div img:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: 1s;
 }
 
@@ -339,7 +371,7 @@ main {
 input {
   border: none;
   font-family: 'Indie Flower', cursive;
-  padding: 10px;
+  padding: 0.5em;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -365,6 +397,9 @@ label {
   background-color: aliceblue;
   font-size: 18px;
   cursor: pointer;
+}
+input:focus {
+  background-color: rgb(190, 228, 230);
 }
 
 footer {
@@ -392,22 +427,26 @@ footer {
   }
   .header {
     border-radius: 3px;
-    padding: 13px 5px 13px 5px;
+    padding: 12px 3px 13px 5px;
     font-size: 27px;
     color: aliceblue;
     align-items: center;
-    grid-template-columns: 5% 73% 16% 6%;
+    grid-template-columns: 8% 69% 17% 5%;
     grid-template-areas: 'logo navbar buscador compra';
   }
-  .logo h1 {
-    margin-left: 10px;
+  .logo p {
+    margin-left: 7px;
     font-size: 24px;
+  }
+  .logo img {
+    height: 55px;
   }
   .navbar-toggle {
     display: none;
   }
   .navbar {
     font-size: 21px;
+    margin: 10px 30px;
   }
   .menu-navbar {
     display: flex;
@@ -439,7 +478,7 @@ footer {
   }
   .compra {
     display: flex;
-    padding-bottom: 13px;
+    padding: 0px 0px 13px 4px;
   }
   .compra img {
     width: 30px;
@@ -447,28 +486,19 @@ footer {
 }
 .galeria-destacados {
   margin: 10px 30px 25px 30px;
-  padding: 10px 15px 10px 15px;
-}
-.foto1,
-.foto2,
-.foto3,
-.foto4 {
-  width: 63%;
-  border: 5px solid;
-  border-radius: 30px;
 }
 
 @media screen and (max-width: 650px) {
   .header {
-    grid-template-columns: 8% 55% 27% 9%;
+    grid-template-columns: 9% 54% 27% 9%;
     grid-template-areas: 'logo navbar buscador compra';
   }
   .logo {
     grid-area: logo;
     width: 44px;
-    margin-top: 15px;
+    margin-top: 0.5em;
   }
-  .logo h1 {
+  .logo p {
     display: none;
   }
   #chkToggle:checked + .menu-navbar {
@@ -479,16 +509,18 @@ footer {
     font-size: 12px;
     padding-top: 0px;
   }
+
   li {
-    line-height: 2em;
+    line-height: 1.2em;
   }
   .navbar-productos {
     font-size: 12px;
+    padding-left: 15px;
   }
   #chkToggleproductos:checked + .menu-productos {
     display: block;
     float: inline-end;
-    margin-top: 15px;
+    margin-top: 1em;
   }
   .search-box input {
     font-size: 12px;
@@ -507,11 +539,17 @@ footer {
   .content {
     height: 200px;
   }
+
   .secciones h2 {
     font-size: 25px;
     margin-top: 0px;
   }
+  h1 {
+    font-size: 25px;
+    margin-top: 0;
+  }
   .bienvenida {
+    margin: 0px 30px;
     padding: 15px;
     gap: 11px;
   }
@@ -520,47 +558,32 @@ footer {
     font-size: 16px;
   }
   .galeria-destacados {
-    margin-bottom: 0px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .galeria-destacados > div > img {
+    width: 55%;
   }
   .galeria-destacados h3 {
     font-size: 12px;
-    width: 85%;
   }
   .galeria-destacados p {
     font-size: 11px;
-    width: 80%;
   }
   .galeria-destacados p img {
     width: 12px;
     height: 12px;
   }
-  .foto1 {
-    grid-area: foto1;
-  }
-  .foto2 {
-    grid-area: foto2;
-  }
-  .foto3 {
-    grid-area: foto3;
-  }
-  .foto4 {
-    grid-area: foto4;
-  }
-  .foto1,
-  .foto2,
-  .foto3,
-  .foto4 {
-    width: 68%;
-    border: 3px solid;
-    border-radius: 10px;
-  }
   .galeria-todos {
-    margin: 0;
+    margin: 0px 30px;
   }
   .galeria-todos div {
     width: 100px;
     height: 140px;
-    margin: 10px;
+    margin: 0.5em;
   }
   .todos-productos h3 {
     font-size: 15px;
@@ -570,7 +593,8 @@ footer {
   }
   .ubicacion,
   .contacto {
-    padding: 25px 15px 25px 15px;
+    padding: 20px;
+    margin: 0px 20px;
   }
   .ubicacion h3,
   h4 {

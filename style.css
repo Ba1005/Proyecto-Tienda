@@ -317,11 +317,12 @@ h1 {
   transition: 1s;
 }
 
-.galeria-todos span {
+.galeria-todos h4 {
+  font-size: 22px;
   cursor: pointer;
   transition: color 0.5s;
 }
-.galeria-todos span :hover {
+.galeria-todos h4 :hover {
   color: rgba(243, 152, 16, 0.87);
 }
 .contenedor {
@@ -585,7 +586,7 @@ footer {
     height: 140px;
     margin: 0.5em;
   }
-  .todos-productos h3 {
+  .todos-productos h4 {
     font-size: 15px;
   }
   .contenedor {

@@ -1,3 +1,18 @@
+:root {
+  --primary-color: rgb(205, 233, 250);
+  --secondary-color: rgb(100, 153, 184);
+  --primary-font-family: 'Indie Flower', cursive;
+  --secondary-font-family: 'Butterfly Kids', cursive;
+  --primary-font-color: rgb(57, 123, 161);
+  --secundary-font-color: aliceblue;
+  --font-size-base: 16px;
+  --font-size-tittle: 30px;
+  --font-size-subtittle: 21px;
+  --font-size-tittle-min: 25px;
+  --font-size-subtittle-min: 15px;
+  --line-height-base: 1.5;
+  --border-primary: 5px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -18,24 +33,22 @@ title {
 }
 .header {
   padding: 5px;
-  background-color: rgb(100, 153, 184);
-  font-family: 'Butterfly Kids', cursive;
+  background-color: var(--secondary-color);
+  font-family: var(--secondary-font-family);
   font-weight: bolder;
   font-style: normal;
-  font-size: 17px;
-  color: aliceblue;
+  color: var(--secundary-font-color);
   display: grid;
   grid-template-columns: 6% 65% 22% 7%;
   grid-template-areas: 'logo navbar buscador compra';
 }
 .logo {
   grid-area: logo;
-  width: 55px;
-  align-items: center;
-  margin-left: 5px;
+  width: 100%;
+  padding: 7px;
 }
 .logo p {
-  font-size: 17px;
+  font-size: var(--font-size-base);
 }
 .logo img {
   width: 100%;
@@ -46,13 +59,13 @@ title {
   margin: 15px;
 }
 li a {
-  color: aliceblue;
+  color: var(--secondary-font-family);
 }
 .menu-navbar {
   display: none;
   list-style: none;
   text-decoration: none;
-  font-size: 18px;
+  font-size: var(--font-size-subtittle);
 }
 #chkToggle:checked + .menu-navbar {
   display: flex;
@@ -65,7 +78,10 @@ li a {
   cursor: pointer;
 }
 .navbar-toggle {
-  font-size: 23px;
+  font-size: var(--font-size-tittle);
+}
+.navbar-productos {
+  font-size: var(--font-size-subtittle);
 }
 .menu-productos {
   display: none;
@@ -75,10 +91,11 @@ li a {
 #chkToggleproductos:checked + .menu-productos {
   display: block;
   margin-top: 0.5em;
+  font-size: var(--font-size-subtittle);
 }
 .menu-productos li {
   cursor: pointer;
-  line-height: 1.5em;
+  line-height: var(--line-height-base);
   border-radius: none;
 }
 #chkToggle {
@@ -107,10 +124,10 @@ li a {
   border: 0;
   outline: 0;
   background: transparent;
-  font-family: 'Indie Flower', cursive;
+  font-family: var(--primary-font-family);
   font-weight: 400;
   font-style: normal;
-  font-size: 15px;
+  font-size: var(--font-size-base);
 }
 .search-box button img {
   width: 25px;
@@ -134,7 +151,7 @@ li a {
   margin-left: 15px;
 }
 main {
-  background-color: rgb(205, 233, 250);
+  background-color: var(--primary-color);
   height: 100%;
   margin: 0;
   padding: 0;
@@ -157,7 +174,7 @@ main {
   width: 60%;
   height: 85%;
   left: 10px;
-  background: rgb(150, 192, 216);
+  background: var(--secondary-color);
   overflow: hidden;
   border: solid 5px #fff;
   border-radius: 5px;
@@ -221,21 +238,21 @@ main {
   cursor: pointer;
 }
 .secciones {
-  font-family: 'Indie Flower', cursive;
+  font-family: var(--primary-font-family);
   font-weight: 400;
   font-style: normal;
   padding: 0px;
-  color: rgb(57, 123, 161);
+  color: var(--primary-font-color);
   text-align: center;
   list-style: none;
 }
 
 .secciones h2 {
-  font-size: 30px;
+  font-size: var(--font-size-tittle);
   margin-top: 20px;
 }
 h1 {
-  font-size: 30px;
+  font-size: var(--font-size-tittle);
 }
 .bienvenida {
   padding: 25px;
@@ -258,7 +275,7 @@ h1 {
   gap: 1em;
 }
 .galeria-destacados > div {
-  border: 1px solid rgb(57, 123, 161);
+  border: 1px solid var(--primary-font-color);
   border-radius: 15px;
   width: 100%;
   max-width: 300px;
@@ -282,7 +299,7 @@ h1 {
 }
 
 .galeria-destacados p {
-  font-size: 25px;
+  font-size: var(--font-size-tittle-min);
 }
 .galeria-destacados p img {
   width: 25px;
@@ -307,7 +324,7 @@ h1 {
 .galeria-todos div img {
   width: 100%;
   padding: 15px;
-  border: 5px solid;
+  border: var(--border-primary) solid;
   border-radius: 100px;
   cursor: pointer;
   transition: 1s;
@@ -318,16 +335,16 @@ h1 {
 }
 
 .galeria-todos h4 {
-  font-size: 22px;
+  font-size: var(--font-size-tittle-min);
   cursor: pointer;
   transition: color 0.5s;
 }
-.galeria-todos h4 :hover {
+.galeria-todos h4:hover {
   color: rgba(243, 152, 16, 0.87);
 }
 .contenedor {
   background-color: #0a0909;
-  color: aliceblue;
+  color: var(--secundary-font-color);
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -363,39 +380,39 @@ h1 {
 }
 .campo-input {
   display: block;
-  font-family: 'Indie Flower', cursive;
+  font-family: var(--primary-font-family);
   font-style: normal;
   width: 100%;
   height: 24px;
-  border-radius: 5px;
+  border-radius: var(--border-primary);
 }
 input {
   border: none;
-  font-family: 'Indie Flower', cursive;
+  font-family: var(--primary-font-family);
   padding: 0.5em;
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;
+  font-size: var(--font-size-base);
 }
 label {
   font-size: 18px;
 }
 .campo-textarea {
   width: 90%;
-  border-radius: 5px;
+  border-radius: var(--border-primary);
   border: none;
   padding: 10px;
-  font-family: 'Indie Flower', cursive;
+  font-family: var(--primary-font-family);
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;
+  font-size: var(--font-size-base);
   resize: vertical;
 }
 .campo-submit {
   display: block;
   width: 100%;
-  border-radius: 5px;
-  background-color: aliceblue;
+  border-radius: var(--border-primary);
+  background-color: var(--secundary-font-color);
   font-size: 18px;
   cursor: pointer;
 }
@@ -404,9 +421,7 @@ input:focus {
 }
 
 footer {
-  border: 1px solid;
-  border-color: #0a0909;
-  padding: 15px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
 }
@@ -430,7 +445,7 @@ footer {
     border-radius: 3px;
     padding: 12px 3px 13px 5px;
     font-size: 27px;
-    color: aliceblue;
+    color: var(--secundary-font-color);
     align-items: center;
     grid-template-columns: 8% 69% 17% 5%;
     grid-template-areas: 'logo navbar buscador compra';
@@ -440,13 +455,14 @@ footer {
     font-size: 24px;
   }
   .logo img {
+    width: 55px;
     height: 55px;
   }
   .navbar-toggle {
     display: none;
   }
   .navbar {
-    font-size: 21px;
+    font-size: var(--font-size-subtittle);
     margin: 10px 30px;
   }
   .menu-navbar {
@@ -456,10 +472,10 @@ footer {
     text-align: center;
     margin-top: 6px;
     padding-left: 5px;
-    font-size: 21px;
+    font-size: var(--font-size-subtittle);
   }
   .navbar-productos {
-    font-size: 21px;
+    font-size: var(--font-size-subtittle);
   }
   #chkToggleproductos:checked + .menu-productos {
     display: flex;
@@ -469,13 +485,13 @@ footer {
     height: 90px;
     width: 270px;
     margin-top: 10px;
-    font-size: 23px;
+    font-size: var(--font-size-subtittle);
   }
   .menu-productos li {
-    border: 1px solid aliceblue;
-    border-radius: 5px;
+    border: 1px solid var(--secondary-font-family);
+    border-radius: var(--border-primary);
     width: 87px;
-    font-size: 21px;
+    font-size: var(--font-size-subtittle);
   }
   .compra {
     display: flex;
@@ -516,7 +532,7 @@ footer {
   }
   .navbar-productos {
     font-size: 12px;
-    padding-left: 15px;
+    margin-left: 35px;
   }
   #chkToggleproductos:checked + .menu-productos {
     display: block;
@@ -542,11 +558,11 @@ footer {
   }
 
   .secciones h2 {
-    font-size: 25px;
+    font-size: var(--font-size-tittle-min);
     margin-top: 0px;
   }
   h1 {
-    font-size: 25px;
+    font-size: var(--font-size-tittle-min);
     margin-top: 0;
   }
   .bienvenida {
@@ -556,7 +572,7 @@ footer {
   }
   .bienvenida p {
     text-align: justify;
-    font-size: 16px;
+    font-size: var(--font-size-base);
   }
   .galeria-destacados {
     padding: 15px;
@@ -569,10 +585,10 @@ footer {
     width: 55%;
   }
   .galeria-destacados h3 {
-    font-size: 12px;
+    font-size: var(--font-size-subtittle-min);
   }
   .galeria-destacados p {
-    font-size: 11px;
+    font-size: var(--font-size-subtittle-min);
   }
   .galeria-destacados p img {
     width: 12px;
@@ -587,7 +603,7 @@ footer {
     margin: 0.5em;
   }
   .todos-productos h4 {
-    font-size: 15px;
+    font-size: var(--font-size-subtittle-min);
   }
   .contenedor {
     display: block;
@@ -599,6 +615,6 @@ footer {
   }
   .ubicacion h3,
   h4 {
-    font-size: 15px;
+    font-size: var(--font-size-subtittle-min);
   }
 }
